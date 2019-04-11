@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D029176-B3B0-499A-B697-EE18AB51FC37}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProcP</RootNamespace>
+    <AssemblyName>ProcP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iblade-favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=7.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.7.1.0\lib\net45\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UIelements\AreaPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIelements\AreaPopup.Designer.cs">
+      <DependentUpon>AreaPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIelements\AreaPopupInbound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIelements\AreaPopupInbound.Designer.cs">
+      <DependentUpon>AreaPopupInbound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIelements\LineSettingsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIelements\LineSettingsPopup.Designer.cs">
+      <DependentUpon>LineSettingsPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIelements\OrderItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIelements\OrderItemControl.Designer.cs">
+      <DependentUpon>OrderItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIelements\ProductsSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIelements\ProductsSetup.Designer.cs">
+      <DependentUpon>ProductsSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIelements\StatisticsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIelements\StatisticsPage.Designer.cs">
+      <DependentUpon>StatisticsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIelements\UserManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIelements\UserManual.Designer.cs">
+      <DependentUpon>UserManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WHobjects\Area.cs" />
+    <Compile Include="WHobjects\AGV.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WHobjects\CsvHandler.cs" />
+    <Compile Include="WHobjects\Map.cs" />
+    <Compile Include="WHobjects\PathCalculator.cs" />
+    <Compile Include="WHobjects\Line.cs" />
+    <Compile Include="WHobjects\Order.cs" />
+    <Compile Include="WHobjects\OrderItem.cs" />
+    <Compile Include="UIelements\OrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIelements\OrderControl.Designer.cs">
+      <DependentUpon>OrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WHobjects\Product.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WHobjects\Rack.cs" />
+    <Compile Include="WHobjects\Statistics.cs" />
+    <Compile Include="WHobjects\Tile.cs" />
+    <Compile Include="WHobjects\TileRack.cs" />
+    <Compile Include="WHobjects\Warehouse.cs" />
+    <Compile Include="UIelements\WSpopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIelements\WSpopup.Designer.cs">
+      <DependentUpon>WSpopup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIelements\AreaPopup.resx">
+      <DependentUpon>AreaPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIelements\AreaPopupInbound.resx">
+      <DependentUpon>AreaPopupInbound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIelements\LineSettingsPopup.resx">
+      <DependentUpon>LineSettingsPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIelements\OrderControl.resx">
+      <DependentUpon>OrderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIelements\OrderItemControl.resx">
+      <DependentUpon>OrderItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIelements\ProductsSetup.resx">
+      <DependentUpon>ProductsSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIelements\StatisticsPage.resx">
+      <DependentUpon>StatisticsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIelements\UserManual.resx">
+      <DependentUpon>UserManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIelements\WSpopup.resx">
+      <DependentUpon>WSpopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iblade-favicon.ico" />
+    <None Include="Resources\AVG.png" />
+    <None Include="Resources\2.PNG" />
+    <None Include="Resources\6.PNG" />
+    <None Include="Resources\1.PNG" />
+    <Content Include="Resources\bound.jpg" />
+    <None Include="Resources\Rack.png" />
+    <None Include="Resources\order.png" />
+    <None Include="Resources\order settings.png" />
+    <None Include="Resources\order buttons.png" />
+    <None Include="Resources\racks.png" />
+    <None Include="Resources\products on racks.png" />
+    <None Include="Resources\priority.png" />
+    <None Include="Resources\inbound.png" />
+    <None Include="Resources\outbound.png" />
+    <None Include="Resources\drgdrp1.png" />
+    <None Include="Resources\start sim.png" />
+    <None Include="Resources\stop sim.png" />
+    <Content Include="Resources\Untitled Diagram.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

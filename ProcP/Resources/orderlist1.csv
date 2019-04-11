@@ -1,0 +1,6 @@
+ID,Type,TimeStamp,ItemsList,Quantity
+Order1,Inbound,18/04/2018 12:20,Chair,3
+Order2,Inbound,18/04/2018 12:20,Table,2
+Order3,Outbound,18/04/2018 12:40,Chair,1
+Order4,Outbound,18/04/2018 15:20,Table,1
+Order5,Outbound,18/04/2018 15:40,Table,4
